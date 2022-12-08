@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+    
+       
+    <script>
+
+        var rok = '';
+        var i;
+
+        for ( i = 1990; i < 2030; i += 1 )
+        {    
+            if ( new Date( i, 1, 29 ).getMonth() === 1 ) 
+                {
+                rok += '<p>' + i + " P"+'</p>';
+                }
+           if (rok % 10 == 0) {                    // (rok.length % 10 == 0) rok += '<p>' + i + " P"+ " O" +'</p>';
+               rok += '<p>' + i + " P" +'</p>';              }      // nacita roky 1990, 2008 a 2028
+            
+        }
+        
+        document.body.innerHTML = rok;       
+        
+    </script>
+
+   
+
+    <h4>Priestupné roky od 1990 do 2030</h4>
+    
+    <p id="rok"></p>
+
+    <hr>
+
+    <h4>Priestupne roky konciace na 0</h4>
+
+    <p id="demo"></p>
+
+    
+    <script>
+       
+       const roky = ["1990","1992", "1996", "2000", "2004", "2008", "2012", "2016", "2020", "2024", "2028"];
+       
+       document.getElementById("demo").innerHTML = roky [0]+ "  O" + "; " + roky [3] + "  O" + "; " + roky [8] + "  O";
+       
+
+    </script>
+
+    
+
+    
+</body>
+</html>
