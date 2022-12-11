@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+    
+       
+    <script>
+
+        var rok = '';
+        var i;
+
+        for ( i = 1990; i < 2030; i += 1 ) 
+                {    
+         if ( new Date( i, 1, 29 ).getMonth() === 1 ) 
+                {
+                rok += '<p>' + i + " P"+'</p>';
+                }
+            if (rok % 10 == 0) {                    // (rok.length % 10 == 0) rok += '<p>' + i + " P"+ " O" +'</p>';
+               rok += '<p>' + i + " P" + '</p>';              }      // nacita roky 1990, 2008 a 2028
+               
+        }        
+        document.body.innerHTML = rok;       
+        
+    </script>
+   
+    <h4>Priestupné roky od 1990 do 2030</h4>
+    
+    <p id="rok"></p>
+
+     <hr>
+
+    <h4>Priestupne roky konciace na 0</h4>
+
+    <p id="demo1"></p>
+   
+    <script>
+       
+       const roky = ["1990","1992", "1996", "2000", "2004", "2008", "2012", "2016", "2020", "2024", "2028", "2030"];
+       
+       document.getElementById("demo1").innerHTML = roky [0]+ "  O" + "; " + roky [3] + "  O" + "; " + roky [8] + "  O" + "; "+ roky [11] + "  O";
+       
+
+    </script>
+
+    <hr>
+
+    <h4>Priestupne roky, roky konciace na nulu a datum narodenia</h4>
+
+    <p id="demo"></p>
+
+    <script>
+    
+      for ( y = 1989; y < 2031; y++) {
+
+         let vypis = y;
+
+         console.log(i);
+
+         if ((0 == y % 4) && (0 != y % 100) || (0 == y % 400)) {
+             vypis += " P";
+             console.log(y + ' P');
+
+         }
+                    
+         if((y % 2 == 0)&&(y % 5 == 0)&&(y % 10 == 0)&&(y !== 2010)){
+
+             vypis += " P" + " O";
+             console.log(vypis);
+         }         
+         //if((y == 1990)&&(y == 2030)){
+          //   vypis += " P" + ' O';
+           //  console.log(y + ' P' + ' O');  }
+           
+         if(y == 2030) {
+             vypis += " N";
+             console.log(vypis);
+         }
+         
+        let p = document.createElement("p");
+        p.innerText = vypis;
+        demo.append(p);
+ 
+     }
+         
+    </script>
+
+    
+
+    
+</body>
+</html>
